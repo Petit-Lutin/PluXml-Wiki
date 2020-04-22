@@ -1,6 +1,6 @@
-# Pré-requis et installation
+# Pré-requis et installation / Setup
 
-## Pré-requis
+## Pré-requis / Before the install
 Que ce soit en local sur votre ordinateur ou sur internet, votre hébergement doit posséder les éléments suivants pour pouvoir utiliser PluXml :
 
 * PHP 5.6 ou supérieur
@@ -8,12 +8,12 @@ Que ce soit en local sur votre ordinateur ou sur internet, votre hébergement do
 * Fonction PHP d'envoi d'emails autorisée (non obligatoire)
 * Le module Apache *mod_rewrite* activé pour utiliser la réécriture d'url (non obligatoire)
 
-## Installation
+## Installation / Install
 
-### Télécharger PluXml sur le site officiel
+### Télécharger PluXml sur le site officiel / Download PluXml from official website
 Téléchargez la dernière version sur http://pluxml.org
 
-### Installer PluXml en local sur son ordinateur
+### Installer PluXml en local sur son ordinateur / Install PluXml locally on your computer
 Nous allons installer un serveur web de type AMP (Apache MySQL PHP). L'installation de MySQL n'est pas nécessaire dans le cas présent, PluXml fonctionnant sans base de données. Bien sûr, vous pouvez aussi utiliser NGINX à la place d’Apache.
 
 ![installation](img/install.jpg)
@@ -57,7 +57,7 @@ type */Users/votrenom/Sites*.
 * Cliquez-droit sur l’icôneEasyPHP, puis sur local web pour ouvrir votre navigateur.
 * Suivre la procédure d’installation.
 
-### Installer PluXml sur son hébergeur
+### Installer PluXml sur son hébergeur / Install PluXml on your webhost
 * Décompresser l'archive pluxml-latest.zip sur votre ordinateur.
 * Ouvrir votre logiciel de transfert FTP (Filezilla, SmartFTP, ...).
 * Se connecter à votre hébergement, via votre compte FTP.
@@ -77,19 +77,19 @@ type */Users/votrenom/Sites*.
 !!! note
     Si vous rencontrez des difficultés pour installer et utiliser PluXml sur un hébergeur (Free, OVH, ...), vous trouverez plusieurs éléments de réponses sur [cette page](hebergeurs.md).
 
-### Installer PluXml sur un serveur dédié avec NGINX
+### Installer PluXml sur un serveur dédié avec NGINX / Install PluXml on a dedicated server with NGINX
 
 Si vous souhaitez installer PluXml sur un serveur dédié derrière un serveur web NGINX, vous pouvez vous référer à la page ci-dessous :
 
 [Configuration NGINX pour PluXml](nginx.md)
 
-### Installer PluXml depuis le dépôt Debian/Ubuntu
+### Installer PluXml depuis le dépôt Debian/Ubuntu / Install PluXml from the Debian/Ubuntu package
 
 PluXml est disponible sous la forme d'un paquet Debian/Ubuntu, maintenu par la communauté.
 
 [Cliquer ici pour en savoir plus](debian.md)
 
-# L'Arborescence
+# L'Arborescence / Tree structure
 
     - core : le cœur de Pluxml
       - admin : les fichiers de l’administration
@@ -115,9 +115,9 @@ PluXml est disponible sous la forme d'un paquet Debian/Ubuntu, maintenu par la c
     - install.php : fichier d’installation
     - sitemap.php : le fichier de construction du sitemap
 
-# Mise à jour
+# Mise à jour / Update
 
-## Sauvegarder ses données
+## Sauvegarder ses données / Save your data
 Avant une mise à jour de PluXml, il faut par précaution, sauvegarder votre site web. La procédure est la même pour une sauvegarde régulière.
 
 PluXml n’ayant pas de base de données, la sauvegarde est très simple. Tous les fichiers de PluXml sont dans un seul et même dossier, qui correspond à la racine de votre site web. Il suffit de sauvegarder ce dossier racine, par exemple, en local sur votre ordinateur, sur une clé USB ou sur un autre support externe.
@@ -127,7 +127,7 @@ Ainsi, si votre site se trouve dans le répertoire /var/www/pluxml, il suffit de
 Si vous souhaitez sauvegarder uniquement les articles, les commentaires, les pages statiques et la
 configuration du site et des plugins, une copie du répertoire /var/www/pluxml/data suffit.
 
-## Lancer la mise à jour
+## Lancer la mise à jour / launch the update
 
 !!! danger "Important"
     Assurez-vous d’avoir fait une sauvegarde de votre site avant de mettre à jour PluXml (voir *Sauvegarder ses données*).
@@ -142,7 +142,7 @@ Suivre les étapes ci-dessous pour effectuer la mise à jour :
 - Déposer tout le contenu sélectionné à la racine du site en écrasant les anciens fichiers.
 - Se connecter à l’adresse du site avec un navigateur internet et suivre les instructions pour lancer la mise à jour.
 
-# Accéder à la l'administration
+# Accéder à la l'administration / access to the admin panel
 
 PluXml installé, vous pouvez accéder à l’administration du site. Avec le thème par défaut, le lien
 Administration pour se connecter à la zone d'administration est affiché tout en bas de votre site.
@@ -155,7 +155,7 @@ Le login de connexion et le mot de passe sont ceux que vous avez définis lors d
 
 ![login](img/login.jpg)
 
-# Réinitialiser le mot de passe admin
+# Réinitialiser le mot de passe admin / Reset the password for admin
 
 !!! note
     La procédure suivante, vous permettra de réinitialiser votre mot de passe admin, dans le cas ou la procédure "mot de passe" oublié via l'envoi d'un e-mail n'a pas fonctionné.
@@ -187,7 +187,7 @@ Ouvrir le fichier *data/configuration/users.xml* sur le site dont le mot de pass
 
 Enregistrer et vous pourrez désormais vous connecter dans la zone d'administration avec le mot de passe copié. Pour le modifier, aller dans l'administration, à la section "Profil".
 
-# Recommandation après une installation ou une mise à jour
+# Recommandation après une installation ou une mise à jour / Highly recommended after an install or an update
 
 Après une installation ou une mise à jour, par mesure de sécurité, supprimez le fichier install.php et le dossier update qui se trouvent à la racine de votre site.
 
